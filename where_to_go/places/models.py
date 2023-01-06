@@ -21,6 +21,7 @@ class PlaceImage(models.Model):
 
     class Meta:
         db_table = 'place_image'
+        ordering = ['index']
 
     def __str__(self):
         return f'{self.index} {self.place}'
