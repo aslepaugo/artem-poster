@@ -78,3 +78,31 @@ python3 manage.py createsuperuser
 ```bash
 python3 manage.py runserver
 ```
+
+## Add location using command
+
+There is an additional utility `load_place` to help in uploading json data into database.
+
+To upload data use manage utility load_place with json path as a parameter:
+
+```bash
+python manage.py load_place https://your.json.url
+```
+
+JSON schema for location:
+
+```bash
+{
+    "title": "Title of the location",
+    "imgs": [
+        "https://link.to.image.1",
+        "https://link.to.image.2"
+    ],
+    "description_short": "Summary for the location or event",
+    "description_long": "Full description",
+    "coordinates": {
+        "lng": longitude_value,
+        "lat": latitude_value
+    }
+}
+```
