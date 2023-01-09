@@ -8,21 +8,23 @@ Demo of this site is available [here](https://aslepaugo.pythonanywhere.com). to 
 
 1. Enter into the admin panel with provided lgin and password.
 
-_image_
+![image](https://user-images.githubusercontent.com/17562496/211249520-b2ca280b-0a75-4d40-b5ef-d4df8bb3f72d.png)
 
 2. Go to Panel *PLACES* and then click Add.
 
-_image_
+![image](https://user-images.githubusercontent.com/17562496/211249577-746d6244-a268-4b63-ab0c-5b163a72907a.png)
 
 3. Fill all info required as in the example below.
 
-_image_
+![image](https://user-images.githubusercontent.com/17562496/211249678-3e2efe71-e710-4d71-997e-2fad19aa558f.png)
+![image](https://user-images.githubusercontent.com/17562496/211249700-14ffcaca-a6f8-4aa1-a8e0-4e095afc4d97.png)
+
 
 ## How to edit location
 
 Open location from the list. And edit as you wish
 
-_image_
+![image](https://user-images.githubusercontent.com/17562496/211249764-5d887d35-5c33-4690-a308-43e0ad52c392.png)
 
 
 ## Project setup
