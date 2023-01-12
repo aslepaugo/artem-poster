@@ -52,5 +52,5 @@ class Command(BaseCommand):
                 place_image.image.save(filename, content=image_content)
             except requests.exceptions.HTTPError:
                 self.stderr.write(self.style.ERROR(
-                    f'Image {img_link} is missed'))
+                    f'Image {img_link} is missing'))
             self.stdout.write(self.style.SUCCESS('Image for location is loaded'))
