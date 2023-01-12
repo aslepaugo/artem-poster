@@ -18,11 +18,11 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from where_to_go import views
+from places import views
 
 urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
     path('', views.index), 
-    path('places/<int:place_id>/', views.place_detail_view),
+    path('places/', include('places.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
