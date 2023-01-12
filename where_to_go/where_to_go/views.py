@@ -36,7 +36,7 @@ def place_detail_view(_, place_id):
     place = get_object_or_404(Place, id=place_id)
     place_details = {
         "title": place.title,
-        "imgs": [img.image.url for img in place.images.order_by('index')],
+        "imgs": [img.image.url for img in place.images.all()],
         "description_short": place.summary,
         "description_long": place.description,
         "coordinates": {
