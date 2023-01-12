@@ -41,25 +41,55 @@ pip install -r requirements.txt
 
  ___Mandatory variables___
 
-```bash 
-SECRET_KEY = 'secret_key'
-DATABASE_URL = sqlite:////home/user/project/db.sqlite3
-```
+- `SECRET_KEY` = 'secret_key'
+
+    A secret key for a particular Django installation is used to provide cryptographic signing. [More details](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-SECRET_KEY).
+
+- `DATABASE_URL` = sqlite:////home/user/project/db.sqlite3
+
+    SCHEMA and PATH to Database based on [type-casting methods of environ.Env](https://django-environ.readthedocs.io/en/latest/types.html#environ-env-db-url)
 
 ___Variables with predefined default values___
 
-```bash
-DEBUG = False
-ALLOWED_HOSTS = 'localhost', '127.0.0.1'
-STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = 'media/'
-LANGUAGE_CODE = 'en-us'
-USE_I18N = True
-USE_TZ = True
-TIME_ZONE = 'UTC'
-```
+- `DEBUG` = False
+
+    A boolean that turns on/off debug mode.
+
+- `ALLOWED_HOSTS` = 'localhost', '127.0.0.1'
+
+    A list of strings representing the host/domain names that this Django site can serve.
+
+- `STATIC_URL` = '/static/'
+
+    URL to use when referring to static files located in STATIC_ROOT.
+
+- `STATIC_ROOT` = 'static/'
+
+    The absolute path to the directory where collectstatic will collect static files for deployment.
+
+- `MEDIA_URL` = '/media/'
+
+    URL that handles the media served from MEDIA_ROOT, used for managing stored files. It must end in a slash if set to a non-empty value.
+
+- `MEDIA_ROOT` = 'media/'
+
+    Absolute filesystem path to the directory that will hold user-uploaded files.
+
+- `LANGUAGE_CODE` = 'en-us'
+
+    A string representing the language code for this installation. This should be in standard language ID format.
+
+- `USE_I18N` = True
+
+    A boolean that specifies whether Django’s translation system should be enabled. 
+
+- `USE_TZ` = True
+
+    A boolean that specifies if datetimes will be timezone-aware by default or not. If this is set to True, Django will use timezone-aware datetimes internally.
+
+- `TIME_ZONE` = 'UTC'
+
+    A string representing the time zone for this installation. See the [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 3. Apply migrations.
 
