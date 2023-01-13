@@ -22,12 +22,14 @@ class Command(BaseCommand):
             location = response.json()
             image_urls = location['imgs']
 
-            place, is_created = Place.objects.get_or_create(
+            place, is_created = Place.objects.update_or_create(
                 title=location['title'],
-                summary=location['description_short'],
-                description=location['description_long'],
                 longitude=location['coordinates']['lng'],
                 latitude=location['coordinates']['lat'],
+                defaults={
+                    "summary": location['description_short'],
+                    "description": location['description_long'],
+                }
             )
         except requests.exceptions.HTTPError:
             self.stderr.write(self.style.ERROR(
