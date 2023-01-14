@@ -48,10 +48,8 @@ class Command(BaseCommand):
                 filename = unquote(Path(urlparse(img_link).path).name)
                 image_response = requests.get(img_link)
                 image_response.raise_for_status()
-                image_content = ContentFile(image_response.content)
-
-                place_image = PlaceImage(index=index, place=place)
-                place_image.image.save(filename, content=image_content)
+                image_content = ContentFile(image_response.content, filename)
+                PlaceImage.objects.create(index=index, place=place, image=image_content)
             except requests.exceptions.HTTPError:
                 self.stderr.write(self.style.ERROR(
                     f'Image {img_link} is missing'))
